@@ -1,0 +1,157 @@
+{
+  "Frontend Developer": {
+    "Easy": [
+      "What is HTML?",
+      "What is CSS?",
+      "What is JavaScript?",
+      "What is React?",
+      "What is a component in React?",
+      "What is useState?",
+      "What is useEffect?",
+      "Difference between var, let, const?",
+      "What is DOM?",
+      "What is event handling?"
+    ],
+    "Medium": [
+      "What is Virtual DOM?",
+      "Explain props vs state",
+      "What is JSX?",
+      "Explain React lifecycle",
+      "What is conditional rendering?",
+      "What are hooks?",
+      "Explain API calls in React",
+      "What is context API?",
+      "Explain CSS Flexbox",
+      "Explain CSS Grid"
+    ],
+    "Hard": [
+      "How does React reconciliation work?",
+      "Explain memoization in React",
+      "What is Redux and why use it?",
+      "Explain performance optimization in React",
+      "What is code splitting?",
+      "Explain SSR vs CSR",
+      "What are custom hooks?",
+      "Explain debouncing and throttling",
+      "How does browser rendering work?",
+      "Explain accessibility in frontend"
+    ]
+  },
+
+  "Backend Developer": {
+    "Easy": [
+      "What is Node.js?",
+      "What is Express.js?",
+      "What is API?",
+      "What is REST?",
+      "What is JSON?",
+      "What is middleware?",
+      "What is HTTP?",
+      "What are status codes?",
+      "What is routing?",
+      "What is a server?"
+    ],
+    "Medium": [
+      "Explain REST API principles",
+      "What is JWT?",
+      "What is authentication vs authorization?",
+      "What is MVC architecture?",
+      "Explain async/await",
+      "What is error handling in Express?",
+      "Explain CRUD operations",
+      "What is rate limiting?",
+      "What is caching?",
+      "What is database indexing?"
+    ],
+    "Hard": [
+      "How does event loop work?",
+      "Explain microservices architecture",
+      "What is load balancing?",
+      "Explain scaling in backend",
+      "What is WebSocket?",
+      "Explain message queues",
+      "What is Docker?",
+      "Explain security best practices",
+      "How to handle high traffic APIs?",
+      "Explain database sharding"
+    ]
+  },
+
+  "Python Developer": {
+    "Easy": [
+      "What is Python?",
+      "What are lists and tuples?",
+      "What is a dictionary?",
+      "What is indentation?",
+      "What is a function?",
+      "What is a loop?",
+      "What is a module?",
+      "What is pip?",
+      "What is Python used for?",
+      "What is a variable?"
+    ],
+    "Medium": [
+      "Explain OOP in Python",
+      "What are decorators?",
+      "What is list comprehension?",
+      "What is lambda function?",
+      "Explain exception handling",
+      "What is virtual environment?",
+      "What is multithreading?",
+      "What is multiprocessing?",
+      "What are generators?",
+      "Explain file handling"
+    ],
+    "Hard": [
+      "Explain GIL in Python",
+      "What is metaclass?",
+      "Explain memory management",
+      "What is async programming?",
+      "Explain Django architecture",
+      "What is Flask vs Django?",
+      "Explain ORM",
+      "What is serialization?",
+      "Explain caching in Python",
+      "How to optimize Python code?"
+    ]
+  },
+
+  "Full Stack Developer": {
+    "Easy": [
+      "What is full stack development?",
+      "Difference between frontend and backend?",
+      "What is MERN stack?",
+      "What is API?",
+      "What is database?",
+      "What is Git?",
+      "What is HTTP?",
+      "What is deployment?",
+      "What is client-server model?",
+      "What is JSON?"
+    ],
+    "Medium": [
+      "Explain REST API",
+      "How frontend connects to backend?",
+      "What is authentication?",
+      "Explain CRUD operations",
+      "What is MVC?",
+      "What is state management?",
+      "Explain deployment process",
+      "What is cloud?",
+      "What is CI/CD?",
+      "Explain debugging process"
+    ],
+    "Hard": [
+      "Design scalable web app",
+      "Explain system design basics",
+      "How to handle large traffic?",
+      "Explain microservices",
+      "What is caching strategy?",
+      "Explain load balancing",
+      "How to secure full stack app?",
+      "Explain DevOps integration",
+      "What is containerization?",
+      "Explain distributed systems"
+    ]
+  }
+}
