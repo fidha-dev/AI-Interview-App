@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import "./Interview.css";
 
@@ -18,7 +18,7 @@ const Interview = ({ setIsLoggedIn }) => {
     setIsLoggedIn(false);
   };
 
-  // ✅ VOICE FIX (cross-browser)
+  // ✅ VOICE FIX
   const startVoice = () => {
     const SpeechRecognition =
       window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -41,13 +41,17 @@ const Interview = ({ setIsLoggedIn }) => {
     };
   };
 
-  // ✅ GET QUESTION
-  const getQuestion = async () => {
-    const res = await axios.get(`${API}/question/${role}/${difficulty}`);
-    setQuestion(res.data.question);
-    setAnswer("");
-    setFeedback(null);
-  };
+  // ✅ GET QUESTION (useCallback)
+  const getQuestion = useCallback(async () => {
+    try {
+      const res = await axios.get(`${API}/question/${role}/${difficulty}`);
+      setQuestion(res.data.question);
+      setAnswer("");
+      setFeedback(null);
+    } catch (err) {
+      console.error(err);
+    }
+  }, [role, difficulty]);
 
   // ✅ NEXT QUESTION
   const nextQuestion = () => {
@@ -56,27 +60,36 @@ const Interview = ({ setIsLoggedIn }) => {
 
   // ✅ GET FEEDBACK
   const getFeedback = async () => {
-    const res = await axios.post(`${API}/feedback`, {
-      answer,
-      role,
-      difficulty,
-      question,
-    });
+    try {
+      const res = await axios.post(`${API}/feedback`, {
+        answer,
+        role,
+        difficulty,
+        question,
+      });
 
-    setFeedback(res.data.feedback);
-    loadHistory();
+      setFeedback(res.data.feedback);
+      loadHistory();
+    } catch (err) {
+      console.error(err);
+    }
   };
 
-  // ✅ HISTORY
-  const loadHistory = async () => {
-    const res = await axios.get(`${API}/history`);
-    setHistory(res.data);
-  };
+  // ✅ HISTORY (useCallback)
+  const loadHistory = useCallback(async () => {
+    try {
+      const res = await axios.get(`${API}/history`);
+      setHistory(res.data);
+    } catch (err) {
+      console.error(err);
+    }
+  }, []);
 
+  // ✅ FIXED useEffect
   useEffect(() => {
     getQuestion();
     loadHistory();
-  }, [role, difficulty]);
+  }, [getQuestion, loadHistory]);
 
   return (
     <div className="main">
@@ -107,7 +120,6 @@ const Interview = ({ setIsLoggedIn }) => {
 
           <div className="question-box">{question}</div>
 
-          {/* Buttons */}
           <button onClick={startVoice}>🎙 Speak Answer</button>
 
           <textarea
@@ -117,6 +129,7 @@ const Interview = ({ setIsLoggedIn }) => {
           />
 
           <button onClick={getFeedback}>Get Feedback</button>
+
           <button onClick={nextQuestion} className="secondary">
             Next Question
           </button>
