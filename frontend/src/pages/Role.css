@@ -1,0 +1,30 @@
+.role-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+}
+
+.role-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  width: 320px;
+  text-align: center;
+}
+
+.role-card input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+}
+
+.role-card button {
+  width: 100%;
+  padding: 12px;
+  background: #43cea2;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

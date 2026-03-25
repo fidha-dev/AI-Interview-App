@@ -1,0 +1,52 @@
+.main {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url("https://images.unsplash.com/photo-1498050108023-c5249f4df085");
+  background-size: cover;
+  color: white;
+}
+
+.navbar {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  flex: 2;
+  background: rgba(0,0,0,0.6);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.history {
+  flex: 1;
+  background: rgba(0,0,0,0.7);
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.history-item {
+  border-bottom: 1px solid gray;
+  margin-bottom: 10px;
+}
+
+select, textarea, button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+.secondary {
+  background: gray;
+  margin-top: 10px;
+}
